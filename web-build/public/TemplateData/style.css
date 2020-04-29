@@ -1,0 +1,607 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: Burbank;
+    src: url(Burbank.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Thin;
+    src: url(Roboto/Roboto-Thin.ttf);
+}
+
+/************************Unity Player Container**********************/
+.webgl-content * {border: 0; margin: 0; padding: 0}
+.webgl-content .logo, .progress {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+.webgl-content .logo {background: url('progressLogo.Light.png') no-repeat center / contain; width: 154px; height: 130px;}
+.webgl-content .progress {height: 18px; width: 141px; margin-top: 90px;}
+.webgl-content .progress .empty {background: url('progressEmpty.Light.png') no-repeat right / cover; float: right; width: 100%; height: 100%; display: inline-block;}
+.webgl-content .progress .full {background: url('progressFull.Light.png') no-repeat left / cover; float: left; width: 0%; height: 100%; display: inline-block;}
+
+.webgl-content .logo.Dark {background-image: url('progressLogo.Dark.png');}
+.webgl-content .progress.Dark .empty {background-image: url('progressEmpty.Dark.png');}
+.webgl-content .progress.Dark .full {background-image: url('progressFull.Dark.png');}
+
+.webgl-content .footer {margin-top: 5px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;}
+.webgl-content .footer .webgl-logo, .title, .fullscreen {height: 100%; display: inline-block; background: transparent center no-repeat;}
+.webgl-content .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;}
+.webgl-content .footer .title {margin-right: 10px; float: right;}
+.webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
+/********************************************************************/
+
+/************************Game Container***************************/
+.game-not-supported-container {
+    display: none;
+}
+.game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(19, 19, 19);
+}
+.game-header-container {
+    width: 100%;
+    height: 5em;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1px 1px 1px rgb(29, 29, 29);
+    background-color: #FFF;
+}
+.game-label-container {
+    width: 20%;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.game-logo {
+    width: 3em;
+    height: auto;
+}
+.game-label {
+    font-family: Burbank;
+    font-size: 2rem;
+    color: black;
+    text-decoration: none;
+}
+.middle-container {
+    width: 50%;
+    height: 5em;
+}
+.game-menu-container {
+    width: 30%;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu-label {
+    padding: 1em;
+    font-family: Roboto-Light;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+.menu-label:hover {
+    padding: 1em;
+    font-family: Roboto-Light;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #4c8bf5;
+    text-decoration: none;
+}
+.game-player-container {
+    height: 90vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.game-player-full-screen {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.full-screen-icon {
+    width: 2em;
+    height: 2em;
+    z-index: 1;
+    margin-right: 2em;
+    cursor: pointer;
+}
+#gameContainer {
+    width: 100%; 
+    height: 85%;
+    display: block;
+    top: 5em;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+}
+.game-about-container {
+    width: 80%;
+    height: auto;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about-container {
+    width: 40%;
+    height: auto;
+}
+.about-label {
+    font-family: Roboto-Thin;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+.about-description {
+    font-family: Roboto-Light;
+    font-size: 1.0rem;
+    line-height: 1.8em;
+    color: white;
+}
+.game-poster-container {
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-poster-img {
+    width: auto;
+    height: 20em;
+    border-radius: 5px;
+    filter: drop-shadow(2px 2px 2px rgb(71, 71, 71)) saturate(150%);
+}
+.game-help-container {
+    width: 80%;
+    height: auto;
+    margin-top: 10em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.help-container {
+    width: 40%;
+    height: auto;
+}
+.help-label {
+    font-family: Roboto-Thin;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+.help-description {
+    font-family: Roboto-Light;
+    font-size: 1.0rem;
+    line-height: 1.8em;
+    color: white;
+}
+.game-help-poster-container {
+    width: 55%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.game-help-poster-img {
+    width: auto;
+    height: 20em;
+    border-radius: 5px;
+    filter: drop-shadow(2px 2px 2px rgb(71, 71, 71)) saturate(150%);
+}
+/*****************************************************************/
+
+/*******************************Developer Style****************************/
+.developer-container {
+    width: 80%;
+    height: auto;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.profile-container {
+    width: 40%;
+    height: auto;
+}
+.profile-label {
+    font-family: Roboto-Thin;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+.profile-description {
+    font-family: Roboto-Light;
+    font-size: 1.0rem;
+    line-height: 1.8em;
+    color: white;
+}
+.developer-profile-container {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.link-tag {
+    font-family: Roboto-Light;
+    font-size: 1.0rem;
+    line-height: 1.8em;
+    color: #f86420;
+    text-decoration: none;
+    
+}
+.link-tag:hover {
+    font-family: Roboto-Light;
+    font-size: 1.0rem;
+    line-height: 1.8em;
+    color: #f86420;
+    text-decoration: underline;
+    
+}
+.profile-img {
+    width: auto;
+    height: 18em;
+    border-radius: 500px;
+    filter: drop-shadow(0.5px 0.5px 0.5px rgb(71, 71, 71)) saturate(110%);
+}
+.profile-name {
+    font-family: Roboto-Thin;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 2em;
+}
+.social-profile-container {
+    width: 20em;
+    height: 2em;
+    display: flex;
+    flex-direction: row;
+}
+.social-profile-div {
+    width: 5em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-icons {
+    width: 2em;
+    height: 2em;
+}
+/**************************************************************************/
+
+/**************************Footer Container*************************/
+.footer-container {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.copy-rights-label {
+    font-family: Roboto-Light;
+    font-size: 0.7rem;
+    line-height: 1.8em;
+    color: white;
+}
+.copy-rights-label-link {
+    font-family: Roboto-Light;
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: rgb(255, 127, 22);
+}
+.copy-rights-label-link:hover {
+    font-family: Roboto-Light;
+    font-size: 0.7rem;
+    text-decoration: underline;
+    color: rgb(255, 127, 22);
+}
+/*******************************************************************/
+
+@media only screen and (max-width: 1000px) {
+
+/************************Game Container***************************/
+.game-not-supported-container {
+    width: 100%;
+    height: 30vh;
+    margin-top: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.error-label {
+    font-family: Roboto-Light;
+    font-size: 1rem;
+    color: white;
+    line-height: 2em;
+    text-align: center;
+}
+.game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game-header-container {
+    width: 100%;
+    height: 5em;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1px 1px 1px #CCC;
+    background-color: white;
+}
+.game-label-container {
+    width: 40%;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.game-logo {
+    width: 2.5em;
+    height: auto;
+}
+.game-label {
+    font-family: Burbank;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+}
+.middle-container {
+    width: 0;
+    height: 5em;
+}
+.game-menu-container {
+    width: auto;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu-label {
+    padding: 1em;
+    font-family: Roboto-Light;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+.menu-label:hover {
+    padding: 1em;
+    font-family: Roboto-Light;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #4c8bf5;
+    text-decoration: none;
+}
+.game-player-container {
+    display: none;
+}
+#gameContainer {
+    width: 100%; 
+    height: 80%;
+    display: block;
+    top: 5em;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+}
+.game-about-container {
+    width: 90%;
+    height: auto;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-container {
+    width: 100%;
+    height: auto;    
+}
+.about-label {
+    font-family: Roboto-Thin;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+.about-description {
+    font-family: Roboto-Light;
+    font-size: 1.0rem;
+    line-height: 1.8em;
+    color:white;
+}
+.game-poster-container {
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.game-poster-img {
+    width: auto;
+    height: 25em;
+    border-radius: 5px;
+    filter: drop-shadow(2px 2px 2px rgb(71, 71, 71)) saturate(150%);
+}
+.game-help-container {
+    width: 90%;
+    height: auto;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.help-container {
+    width: 100%;
+    height: auto;
+}
+.help-label {
+    font-family: Roboto-Thin;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+.help-description {
+    font-family: Roboto-Light;
+    font-size: 1.0rem;
+    line-height: 1.8em;
+    color: white;
+}
+.game-help-poster-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.game-help-poster-img {
+    width: auto;
+    height: 25em;
+    border-radius: 5px;
+    filter: drop-shadow(2px 2px 2px rgb(71, 71, 71)) saturate(150%);
+}
+/*****************************************************************/
+
+/*******************************Developer Style****************************/
+.developer-container {
+    width: 90%;
+    height: auto;
+    margin-top: 0em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-container {
+    width: 100%;
+    height: auto;
+}
+.profile-label {
+    font-family: Roboto-Thin;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+.profile-description {
+    font-family: Roboto-Light;
+    font-size: 1.0rem;
+    line-height: 1.8em;
+    color: white;
+}
+.developer-profile-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.link-tag {
+    font-family: Roboto-Light;
+    font-size: 1.0rem;
+    line-height: 1.8em;
+    color: #f86420;
+    text-decoration: none;
+    
+}
+.link-tag:hover {
+    font-family: Roboto-Light;
+    font-size: 1.0rem;
+    line-height: 1.8em;
+    color: #f86420;
+    text-decoration: underline;
+    
+}
+.profile-img {
+    width: auto;
+    height: 18em;
+    border-radius: 500px;
+    filter: drop-shadow(0.5px 0.5px 0.5px rgb(71, 71, 71)) saturate(110%);
+}
+.profile-name {
+    font-family: Roboto-Thin;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 2em;
+}
+.social-profile-container {
+    width: 20em;
+    height: 2em;
+    display: flex;
+    flex-direction: row;
+}
+.social-profile-div {
+    width: 5em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-icons {
+    width: 2em;
+    height: 2em;
+}
+/**************************************************************************/
+
+/**************************Footer Container*************************/
+.footer-container {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.copy-rights-label {
+    font-family: Roboto-Light;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+    color: white;
+}
+.copy-rights-label-link {
+    font-family: Roboto-Light;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: rgb(255, 127, 22);
+}
+.copy-rights-label-link:hover {
+    font-family: Roboto-Light;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: rgb(255, 127, 22);
+}
+/*******************************************************************/
+}

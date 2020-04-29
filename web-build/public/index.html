@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Forest Assassin | 2D Platformer Game</title>
+    <meta name="description" content="Forest Assassin is a 2D adventure platformer game with easy controls and fun gameplay, which helps every one to get started, this is a classic platformer game with wonderfully designed characters and world. To complete the game collect all the coins and the trophy try to collect all 100 gold coins to become the highest scorer in this adventurers platformer game, on your way you will face many obstacles and enemies and use your sword to fight with the enemy.">
+            
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@anspattnaik">
+    <meta name="twitter:title" content="Forest Assassin|2D Platformer Game">
+    <meta name="twitter:description" content="Forest Assassin is a 2D adventure platformer game with easy controls and fun gameplay, which helps every one to get started, this is a classic platformer game with wonderfully designed characters and world. To complete the game collect all the coins and the trophy try to collect all 100 gold coins to become the highest scorer in this adventurers platformer game, on your way you will face many obstacles and enemies and use your sword to fight with the enemy.">
+    <meta name="twitter:creator" content="@anspattnaik">
+    <meta name="twitter:image" content="https://assets.hackbotone.com/images/forest-assassin/forest-assassin.PNG">
+
+    <meta property="og:title" content="Forest Assassin|2D Platformer Game" />
+    <meta property="og:description" content="Forest Assassin is a 2D adventure platformer game with easy controls and fun gameplay, which helps every one to get started, this is a classic platformer game with wonderfully designed characters and world. To complete the game collect all the coins and the trophy try to collect all 100 gold coins to become the highest scorer in this adventurers platformer game, on your way you will face many obstacles and enemies and use your sword to fight with the enemy.">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://games.hackbotone.com/forest-assassin" />
+    <meta property="og:image" content="https://assets.hackbotone.com/images/forest-assassin/forest-assassin.PNG" />
+    <meta property="og:site_name" content="Forest Assassin" />
+
+    <link rel="canonical" href="https://games.hackbotone.com/forest-assassin"/>
+    <link rel="shortcut icon" type="image/png" href="https://assets.hackbotone.com/images/forest-assassin/favicon.ico"/>
+    <link rel="apple-touch-icon-precomposed" href="https://assets.hackbotone.com/images/forest-assassin/forest-assassin.PNG"/>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Build.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="game-container">
+      <div id="#" class="game-header-container">
+        <div class="game-label-container">
+            <img src="https://assets.hackbotone.com/images/forest-assassin/king.png" class="game-logo" />
+            <a href="#" rel="noopener" class="game-label">
+              <span>Forest Assassin</span>
+            </a>
+        </div>
+        <div class="middle-container"></div>
+        <div class="game-menu-container">
+          <p>
+            <a href="#about" class="menu-label" rel="noopener">About</a>
+          </p>
+          <p>
+            <a href="#help" class="menu-label" rel="noopener">How to play</a>
+          </p>
+          <p>
+            <a href="#developer" class="menu-label" rel="noopener">Developer</a>
+          </p>
+        </div>
+      </div>
+      <div class="game-not-supported-container">
+        <span class="error-label">Currently, this game is not supported by the mobile browser,
+          if you want to play the game try using a desktop browser.</span>
+      </div>
+      <div class="game-player-container">
+        <div class="webgl-content">
+          <div id="gameContainer"></div>
+        </div>
+        <div class="game-player-full-screen">
+          <img src="TemplateData/images/fullscreen.png" class="full-screen-icon" onclick="gameInstance.SetFullscreen(1)"/>
+        </div>
+      </div>
+      <div id="about" class="game-about-container">
+        <div class="about-container">
+          <p class="about-label">About</p>
+            <p class="about-description">
+              Forest Assassin is a 2D adventure platformer game with easy controls and fun gameplay, which helps every one to get started, this is a classic platformer game with wonderfully designed characters and world. To complete the game collect all the coins and the trophy try to collect all 100 gold coins to become the highest scorer in this adventurers platformer game, on your way you will face many obstacles and enemies and use your sword to fight with the enemy. 
+            </p>
+            <p class="about-description">
+              So let's get ready and explore this epic adventure.
+            </p>
+        </div>
+        <div class="game-poster-container">
+          <img src="TemplateData/images/6.PNG" class="game-poster-img"/>
+        </div>
+      </div>
+      <div id="help" class="game-help-container">
+        <div class="game-help-poster-container">
+          <img src="TemplateData/images/9.PNG" class="game-help-poster-img"/>
+        </div>
+        <div class="help-container">
+          <p class="help-label">How to play?</p>
+            <p>
+              <li class="help-description">To move use [ A ] [ D ] or arrow keys</li>
+            </p>
+            <p>
+              <li class="help-description">Use [ SPACE ] key to jump</li>
+            </p>
+            <p>
+              <li class="help-description">Use [ W ] key to attack</li>
+            </p>
+            <p>
+              <li class="help-description">To finish the game collect all coins and the trophy</li>
+            </p>
+        </div>
+      </div>
+      <div id="developer" class="developer-container">
+        <div class="profile-container">
+          <p class="profile-label">Developer</p>
+          <p class="profile-description">
+            I am the developer of this game and website, I have developed this game using <a href="https://unity.com/" class="link-tag" target="_blank" rel="noopener">Unity3D</a> game engine platform and this game is compatible with all major desktop browsers Chrome, Firefox, Microsoft Edge, Opera, and Safari which supports WebGL 1.0. And I made the game very simple so that it will be easier for any user to complete the mission.
+          </p>
+          <p class="profile-description">
+            In the current version, this game is not supported with any of the Mobile browsers but in future releases, this game will be available for Mobile devices.
+          </p>
+          <p class="profile-description">
+            Share this game with your friends and explore the epic adventure.
+          </p>
+        </div>
+        <div class="developer-profile-container">
+          <img src="TemplateData/images/developer.jpg" class="profile-img"/>
+          <p class="profile-name">Anshuman Pattnaik</p>
+          <div class="social-profile-container">
+            <div class="social-profile-div">
+              <a href="https://www.facebook.com/hackbotone/" target="_blank" rel="noopener"><img src="TemplateData/images/facebook.png" class="social-icons"/></a>
+            </div>
+            <div class="social-profile-div">
+              <a href="https://twitter.com/anspattnaik" target="_blank" rel="noopener"><img src="TemplateData/images/twitter.png" class="social-icons"/></a>
+            </div>
+            <div class="social-profile-div">
+              <a href="https://www.linkedin.com/in/anshuman123/" target="_blank" rel="noopener"><img src="TemplateData/images/linkedin.png" class="social-icons"/></a>
+            </div>
+            <div class="social-profile-div">
+              <a href="https://www.youtube.com/anshumanpattnaik" target="_blank" rel="noopener"><img src="TemplateData/images/youtube.png" class="social-icons"/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </br></br></br></br>
+      <div class="footer-container">
+        <p class="copy-rights-label">© 2020 <a href="https://hackbotone.com/" class="copy-rights-label-link" target="_blank" rel="noopener">HACKBOTONE</a> ALL RIGHTS RESERVED.</p>
+      </div>
+    </div>
+  </body>
+</html>
