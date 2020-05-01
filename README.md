@@ -15,7 +15,7 @@ This game is developed through Unity3d game engine and currently, this game is o
 ### Unity project installation
 ``````````````````````````
 git clone https://github.com/anshumanpattnaik/unity-2d-forest-assassin-game.git
-Open /unity-project folder in Unity
+Open /unity-project folder in Unity editor
 ``````````````````````````
 
 ### To play the game in local server
