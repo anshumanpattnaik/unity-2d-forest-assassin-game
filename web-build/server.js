@@ -1,6 +1,5 @@
 var express = require('express');
 var compression = require('compression');
-var cors = require('cors');
 
 var app = express();
 
