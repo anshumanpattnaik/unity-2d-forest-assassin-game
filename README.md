@@ -34,3 +34,8 @@ Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
 ### Game & Website, Developed by
 [Anshuman Pattnaik](https://www.linkedin.com/in/anshuman123/)
+
+### License & copyright
+© 2020, Anshuman Pattnaik
+
+This project is licensed under the [MIT License](LICENSE)
