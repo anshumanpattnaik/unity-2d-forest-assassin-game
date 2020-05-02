@@ -35,5 +35,5 @@ Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 ### Game & Website, Developed by
 [Anshuman Pattnaik](https://www.linkedin.com/in/anshuman123/)
 
-### License & copyright
+### License
 This project is licensed under the [MIT License](LICENSE)
