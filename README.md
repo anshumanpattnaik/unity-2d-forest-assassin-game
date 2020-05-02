@@ -27,5 +27,10 @@ npm start
 ``````````````````````````
 Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
 
+### Blog & Youtube explanation
+[https://hackbotone.com/blog/forest-assassin-2d-platformer-game](https://hackbotone.com/blog/forest-assassin-2d-platformer-game)
+
+[https://www.youtube.com/watch?v=Cm78Do9VO8s&t=579s](https://www.youtube.com/watch?v=Cm78Do9VO8s&t=579s)
+
 ### Game & Website, Developed by
 [Anshuman Pattnaik](https://www.linkedin.com/in/anshuman123/)
