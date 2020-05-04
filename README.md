@@ -9,7 +9,7 @@ Forest Assassin game is developed through Unity3d game engine and currently, thi
 On the smartphone user will get the feelings of a classic platformer game. So please download the game and share your experience.
 
 <p>
- <a href="https://play.google.com/store/apps/details?id=com.forestassassin"><img src="screenshots/GooglePlay.png" width="500"/></a>
+ <a href="https://play.google.com/store/apps/details?id=com.forestassassin"><img src="screenshots/GooglePlay.png" width="700"/></a>
 </p>
 
 ### Web 
