@@ -15,7 +15,7 @@ On the smartphone user will get the feelings of a classic platformer game. So pl
 ### Web 
 This game is compatible with all major desktop browsers Chrome, Firefox, Microsoft Edge, Opera, and Safari which supports WebGL 1.0. 
 <p>
- <img src="screenshots/main.png"/>
+ <a href="https://games.hackbotone.com/forest-assassin"><img src="screenshots/main.png"/></a>
 </p>
 
 ### To play the game visit the below link
